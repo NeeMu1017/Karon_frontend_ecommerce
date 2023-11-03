@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import "./sigin.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -62,7 +62,7 @@ function Signin() {
     });
   };
   return (
-    <div className="login">
+    <section className="login">
       <div className="con1">
         {!issingin ? (
           <div>
@@ -99,7 +99,7 @@ function Signin() {
               <div className="feild">
                 <button onClick={handelsubmit}>Sign In</button>
               </div>
-              <button onClick={hendelSingup}> old user Login </button>
+              <a onClick={hendelSingup}> old user Login </a>
             </div>
           </div>
         ) : (
@@ -131,14 +131,14 @@ function Signin() {
               <div className="feild">
                 <button onClick={handelLogin}>Log In</button>
               </div>
-              <button
+              <a
                 onClick={() => {
                   setIsSing(false);
                 }}
                 className="toggelbutton"
               >
                 New User first Sign In{" "}
-              </button>
+              </a>
             </div>
           </div>
         )}
@@ -146,7 +146,7 @@ function Signin() {
       <div className="con2">
         <img src="./image/sing.jpg" alt="loadi" />
       </div>
-    </div>
+    </section>
   );
 }
 

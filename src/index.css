@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /*background-image: url('/public/image/stacked-waves-haikei.svg');*/
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   background: linear-gradient(0deg, #377ebb 10%,#90caf9  52%);
   
 }
@@ -24,7 +24,9 @@ a{
   text-decoration: none;
   color: #000;
 }
-
+a:hover{
+  cursor: pointer;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

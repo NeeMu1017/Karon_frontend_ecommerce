@@ -1,0 +1,49 @@
+.container{
+    width: 100%;
+    height:100%;
+    background-color: #4fc3f7   ;
+    border-top-right-radius: 550px;
+    position: absolute;
+    content: "";
+    opacity: 0.8;
+}
+
+.addfrom {
+    display: grid;
+    margin: 20px 0;
+    grid-template-columns: 50% 50%;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin: 0 10px;
+    content: "";
+    position: relative;
+    .item2 {
+        text-align: center;
+        
+        
+    }
+
+    .item1 {
+        
+        padding: 10px;
+        
+        label {
+            display: block;
+            font-size: 0.9rem;
+            text-transform: capitalize;
+            
+
+        }
+
+        input {
+            //margin: 0 10px;
+            position: static;
+            content: "";
+            border: solid 1px #e0e0e0;
+            border-radius: 5px;
+            padding: 5px 15px;
+        }       
+
+
+    }
+}

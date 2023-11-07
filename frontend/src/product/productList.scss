@@ -1,0 +1,35 @@
+.productlist {
+    .titel {
+
+        ul {
+            margin: 20px 0;
+            display: flex;
+            .heading{
+                width: 80%;
+                text-align: center;
+            }
+
+            .addbutton {
+                width: 20%;
+                text-align: center;
+                button {
+                    height: 30px;
+                    border-radius: 10px;
+                    background-color: #536dfe;
+                    border: solid 0.3px #1976d2;
+                    padding: 0 10px;
+                    font-size: medium;
+                    font-weight: 600;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+
+                button:hover {
+                    background-color: #fff;
+                }
+            }
+
+
+        }
+    }
+}

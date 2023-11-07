@@ -1,0 +1,33 @@
+
+
+
+body {
+  overflow-y: scroll;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-image: url('/public/image/stacked-waves-haikei.svg');*/
+  background-repeat: no-repeat;
+  background-size: auto;
+  background: linear-gradient(0deg, #377ebb 10%,#90caf9  52%);
+  
+}
+ul{
+  list-style: none;
+  font-family: Georgia, 'Times New Roman', Times, serifs;
+
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  cursor: pointer;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,6 +1,3 @@
-
-import React, {  useState } from "react";
-
 import React, { useState } from "react";
 
 import Navbar from "../componts/navbar/Navbar";
@@ -14,15 +11,10 @@ import {
   Mobile_Computer,
   Tv_Appliances_Electronics,
   Women_Fashion,
-
-  defolte
+  defolte,
 } from "../componts/minicompont/CategoryofElement";
-import Dropdown from "../componts/minicompont/dropdwon/Dropdown";
 
-
-import Dropdown from "../componts/minicompont/dropdwon/Dropdown";
 import { Autocomplete, Stack, TextField } from "@mui/material";
-
 
 //import { type } from "@testing-library/user-event/dist/type";
 const ACTIONS = {
@@ -46,7 +38,7 @@ const ACTIONS = {
 function ProductAdd() {
   const [select, setSelect] = useState("select ");
   const [secSelet, setSecSelet] = useState("select");
-  
+
   let secondarr;
   switch (select) {
     case ACTIONS.MOBILE_COM:
@@ -68,8 +60,7 @@ function ProductAdd() {
       secondarr = Beauty_Health_Grocery;
       break;
     default:
-
-      secondarr = defolte
+      secondarr = defolte;
 
       secondarr = defolte;
 
@@ -82,13 +73,10 @@ function ProductAdd() {
       {/*<div className="container"></div>*/}
       <div className="addfrom">
         <div className="item1">
-          
-         
-
           <Stack direction={"row"}>
             <div style={{ width: "50%", margin: "10px 5px 0 0" }}>
               <Autocomplete
-              freeSolo
+                freeSolo
                 sx={{
                   backgroundColor: "#ffe",
                   border: "solide 1px #000",
@@ -107,26 +95,19 @@ function ProductAdd() {
                 sx={{
                   backgroundColor: "#ffe",
                   border: "solide 1px #000",
-                  borderRadius: "5px",                  
+                  borderRadius: "5px",
                 }}
-                options={category.map((e)=>e) }
+                options={category.map((e) => e)}
                 renderInput={(params) => (
-                  <TextField {...params} label="Sub Category"  />
+                  <TextField {...params} label="Sub Category" />
                 )}
               />
-             
             </div>
           </Stack>
-         <Stack sx={{margin:"10px 0 0 0"}} direction={"row"} >
-          <TextField
-            label="price"
-            sx={{margin:"0 5px 0 0" }}
-          />
-          <TextField
-            label="quantity"
-          />
-         </Stack>
-
+          <Stack sx={{ margin: "10px 0 0 0" }} direction={"row"}>
+            <TextField label="price" sx={{ margin: "0 5px 0 0" }} />
+            <TextField label="quantity" />
+          </Stack>
         </div>
         <div className="item2"></div>
       </div>

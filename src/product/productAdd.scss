@@ -1,7 +1,7 @@
-.container{
+.container {
     width: 100%;
-    height:100%;
-    background-color: #4fc3f7   ;
+    height: 100%;
+    background-color: #4fc3f7;
     border-top-right-radius: 550px;
     position: absolute;
     content: "";
@@ -17,48 +17,49 @@
     margin: 0 10px;
     content: "";
     position: relative;
+
     .item2 {
         text-align: center;
-        
-        
+        width: 100%;
+        cursor: pointer;
+        .conimg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            
+            img {
+                border-style: dashed;
+                border-radius: 5px;
+                padding: 5px;
+                margin: 5px;
+            }
+        }
+
     }
 
     .item1 {
-        
+
         padding: 10px;
-
-
         text-transform: capitalize;
 
-        
         label {
             display: block;
             font-size: 0.9rem;
             text-transform: capitalize;
-            
+
 
         }
 
-
         input {
             //margin: 0 10px;
-            position: static;
-            content: "";
-            border: solid 1px #e0e0e0;
-            border-radius: 5px;
-            padding: 5px 15px;
-
-        
-
-        input {
-            //margin: 0 10px;
-           text-transform: capitalize;
+            text-transform: capitalize;
             background-color: #fff;
             border-radius: 5px;
-            
 
-        }       
-    }
+
+        }
+
 
     }
 }

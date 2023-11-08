@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import imguploder from "../image/imguploder.png";
 import Navbar from "../componts/navbar/Navbar";
 import Footer from "../componts/footer/Footer";
 import "./productAdd.scss";
@@ -14,9 +14,7 @@ import {
   defolte,
 } from "../componts/minicompont/CategoryofElement";
 
-import { Autocomplete, Stack, TextField } from "@mui/material";
-
-//import { type } from "@testing-library/user-event/dist/type";
+import { Autocomplete, Button, Stack, TextField } from "@mui/material";
 const ACTIONS = {
   MOBILE_COM: category[0],
   TV_APP_ELE: category[1],
@@ -26,18 +24,17 @@ const ACTIONS = {
   BEAUT_HEALTH_GROCERY: category[5],
 };
 
-//function reducer(state, action) {
-//  switch (action.type) {
-//    case "SET_OPTIONS":
-//      return action.payload;
-//    default:
-//      break;
-//  }
-//}
-
 function ProductAdd() {
-  const [select, setSelect] = useState("select ");
-  const [secSelet, setSecSelet] = useState("select");
+   var productdata = {
+    name: "",
+    price: "",
+    quantity: "",
+    img: null
+  };
+  const [product, setProduct] = useState(productdata);
+  const [select, setSelect] = useState();
+  //const [secSelet, setSecSelet] = useState("select");
+ 
 
   let secondarr;
   switch (select) {
@@ -67,12 +64,23 @@ function ProductAdd() {
       break;
   }
 
+  const handelChange = (e) => {
+    setProduct({ ...product, [e.target.name]: e.target.value });
+  };
   return (
     <div>
       <Navbar />
       {/*<div className="container"></div>*/}
       <div className="addfrom">
         <div className="item1">
+          <TextField
+            label="product Name"
+            type="text"
+            sx={{ width: "100%" }}
+            name="name"
+            value={product.name}
+            onChange={handelChange}
+          />
           <Stack direction={"row"}>
             <div style={{ width: "50%", margin: "10px 5px 0 0" }}>
               <Autocomplete
@@ -109,7 +117,16 @@ function ProductAdd() {
             <TextField label="quantity" />
           </Stack>
         </div>
-        <div className="item2"></div>
+        <div className="item2">
+          <div className="conimg">
+            <img src={imguploder} alt="not found" style={{ width: "50%" }} />
+            <TextField type="file" sx={{ width: "50%" }}
+              onChange={(e)=>{setProduct({...product,img:e.target.files[0]})}}
+             />
+            
+          </div>
+        </div>
+        <Button variant="contained" onClick={()=>{console.log(product)}}>updata</Button>
       </div>
 
       <Footer />

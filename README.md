@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 #first install 
 install node package
 ### `npm install`
 
 
+=======
+>>>>>>> 0d1a770 (keronupdate)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

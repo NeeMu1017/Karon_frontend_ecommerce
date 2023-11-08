@@ -26,6 +26,10 @@
     .item1 {
         
         padding: 10px;
+<<<<<<< HEAD
+=======
+        text-transform: capitalize;
+>>>>>>> 0d1a770 (keronupdate)
         
         label {
             display: block;
@@ -34,6 +38,7 @@
             
 
         }
+<<<<<<< HEAD
 
         input {
             //margin: 0 10px;
@@ -42,6 +47,16 @@
             border: solid 1px #e0e0e0;
             border-radius: 5px;
             padding: 5px 15px;
+=======
+        
+
+        input {
+            //margin: 0 10px;
+           text-transform: capitalize;
+            background-color: #fff;
+            border-radius: 5px;
+            
+>>>>>>> 0d1a770 (keronupdate)
         }       
 
 

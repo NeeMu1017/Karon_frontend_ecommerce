@@ -99,11 +99,10 @@ function Signin() {
               <div className="feild">
                 <button onClick={handelsubmit}>Sign In</button>
               </div>
-<<<<<<< HEAD
+
               <a onClick={hendelSingup}> old user Login </a>
-=======
+
               <p onClick={hendelSingup}> old user Login </p>
->>>>>>> 0d1a770 (keronupdate)
             </div>
           </div>
         ) : (
@@ -135,22 +134,15 @@ function Signin() {
               <div className="feild">
                 <button onClick={handelLogin}>Log In</button>
               </div>
-<<<<<<< HEAD
-              <a
-=======
-              <p
->>>>>>> 0d1a770 (keronupdate)
-                onClick={() => {
+
+              <p>
+                onClick=
+                {() => {
                   setIsSing(false);
                 }}
                 className="toggelbutton"
-              >
-                New User first Sign In{" "}
-<<<<<<< HEAD
-              </a>
-=======
+                <a>New User first Sign In </a>
               </p>
->>>>>>> 0d1a770 (keronupdate)
             </div>
           </div>
         )}

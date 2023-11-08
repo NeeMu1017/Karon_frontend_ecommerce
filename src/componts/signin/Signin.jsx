@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./sigin.scss";
 import { useNavigate } from "react-router-dom";
-
+import singimg from "../../image/sing.jpg"
 function Signin() {
   var data = {
     name: "",
@@ -14,13 +14,7 @@ function Signin() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const navigate = useNavigate();
-  //
-  // useEffect(()=>{
-  //  let value = localStorage.getItem("login")
-  //  if(value === "true"){
-  //    setIsSing(true)
-  //  }
-  // })
+  
   const fetchdata = () => {
     fetch("http://localhost:4000/user", {
       method: "POST",
@@ -100,7 +94,7 @@ function Signin() {
                 <button onClick={handelsubmit}>Sign In</button>
               </div>
 
-              <a onClick={hendelSingup}> old user Login </a>
+              
 
               <p onClick={hendelSingup}> old user Login </p>
             </div>
@@ -148,7 +142,7 @@ function Signin() {
         )}
       </div>
       <div className="con2">
-        <img src="./image/sing.jpg" alt="loadi" />
+        <img src={singimg} alt="loadi" />
       </div>
     </section>
   );

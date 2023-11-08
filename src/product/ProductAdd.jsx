@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 import React, {  useState } from "react";
-=======
+
 import React, { useState } from "react";
->>>>>>> 0d1a770 (keronupdate)
+
 import Navbar from "../componts/navbar/Navbar";
 import Footer from "../componts/footer/Footer";
 import "./productAdd.scss";
@@ -14,16 +14,15 @@ import {
   Mobile_Computer,
   Tv_Appliances_Electronics,
   Women_Fashion,
-<<<<<<< HEAD
+
   defolte
 } from "../componts/minicompont/CategoryofElement";
 import Dropdown from "../componts/minicompont/dropdwon/Dropdown";
-=======
-  defolte,
-} from "../componts/minicompont/CategoryofElement";
+
+
 import Dropdown from "../componts/minicompont/dropdwon/Dropdown";
 import { Autocomplete, Stack, TextField } from "@mui/material";
->>>>>>> 0d1a770 (keronupdate)
+
 
 //import { type } from "@testing-library/user-event/dist/type";
 const ACTIONS = {
@@ -47,24 +46,7 @@ const ACTIONS = {
 function ProductAdd() {
   const [select, setSelect] = useState("select ");
   const [secSelet, setSecSelet] = useState("select");
-  //const [secondSelect, secondDispatch] = useReducer(reducer, []);
-  // console.log(dispatch(ACTIONS.MOBILE_COM));
-  //const hendelchangeEvent = (e) => {
-  //  //const selectValu = setSelect
-  //  //setSelect(selectValu);
-  //  //console.log(select);
-  //  let option ;
-  //  switch (select) {
-  //    case "mobile, computer":
-  //      option = Mobile_Computer;
-  //      break;
-  //    default:
-  //      break;
-  //  }
-  //  console.log(option);
-  //  return secondDispatch({ type: "SET_OPTIONS",payload:option });
-  //  //return option
-  //};
+  
   let secondarr;
   switch (select) {
     case ACTIONS.MOBILE_COM:
@@ -86,11 +68,11 @@ function ProductAdd() {
       secondarr = Beauty_Health_Grocery;
       break;
     default:
-<<<<<<< HEAD
+
       secondarr = defolte
-=======
+
       secondarr = defolte;
->>>>>>> 0d1a770 (keronupdate)
+
       break;
   }
 
@@ -100,62 +82,8 @@ function ProductAdd() {
       {/*<div className="container"></div>*/}
       <div className="addfrom">
         <div className="item1">
-          <div>
-<<<<<<< HEAD
-            <label htmlFor="pname">product name</label>
-            <input
-=======
-            
-            <TextField
-              label="Product Name"
-              sx={{width:"100%",
-              
-              }}
-            />
-            {/*<input
->>>>>>> 0d1a770 (keronupdate)
-              type="text"
-              name="pname"
-              id="pname"
-              style={{ width: "95%", maxWidth: "90%" }}
-<<<<<<< HEAD
-            />
-          </div>
-          <div style={{display:"flex"}}>
-            {/*<Autocomplete
-            disablePortal
-            options={category}
-            
-            />*/}
-          </div>
-          {/*<div style={{display:"flex"}}>
-              <div style={{width:"40%"}}>
-                <label>product types</label>
-                <Dropdown
-                  item={category}
-                  isSelect={select}
-                  setIsSelect={setSelect}
-                  //dispatch={dispatch}
-                  //onClick={hendelchangeEvent}
-                />
-              
-              </div>
-              <div style={{width:"40%"}}>
-                <label >sub category</label>
-                <Dropdown
-                  item={secondarr}
-                  isSelect={secSelet}
-                  setIsSelect={setSecSelet}
-
-                  //dispatch={dispatch}
-                  //callfunction={()=>hendelchangeEvent}
-                />
-              </div>
-           
-          </div>*/}
-=======
-            />*/}
-          </div>
+          
+         
 
           <Stack direction={"row"}>
             <div style={{ width: "50%", margin: "10px 5px 0 0" }}>
@@ -186,25 +114,7 @@ function ProductAdd() {
                   <TextField {...params} label="Sub Category"  />
                 )}
               />
-              {/*<Autocomplete
-                 freeSolo
-                sx={{
-                  backgroundColor: "#ffe",                  
-                  borderRadius: "5px",                  
-                }}
-                options={secondarr}
-                renderInput={(pre) => (
-                  <TextField
-                    {...pre}
-                    label="sub category"
-                    sx={{ color: "#000", 
-                         padding:"0"              
-                     }}
-                    value={select}
-                    onChange={(e)=>{setSelect(e.target.value)}}
-                  />
-                )}
-              />*/}
+             
             </div>
           </Stack>
          <Stack sx={{margin:"10px 0 0 0"}} direction={"row"} >
@@ -216,7 +126,7 @@ function ProductAdd() {
             label="quantity"
           />
          </Stack>
->>>>>>> 0d1a770 (keronupdate)
+
         </div>
         <div className="item2"></div>
       </div>

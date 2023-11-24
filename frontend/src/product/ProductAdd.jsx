@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../componts/navbar/Navbar";
 import Footer from "../componts/footer/Footer";
 import "./productAdd.scss";
@@ -10,11 +10,10 @@ import {
   Mobile_Computer,
   Tv_Appliances_Electronics,
   Women_Fashion,
-  defolte
+  defolte,
 } from "../componts/minicompont/CategoryofElement";
-import Dropdown from "../componts/minicompont/dropdwon/Dropdown";
-
-//import { type } from "@testing-library/user-event/dist/type";
+import { Button, Stack, TextField } from "@mui/material";
+import imgupload from "../image/image_upload.png";
 const ACTIONS = {
   MOBILE_COM: category[0],
   TV_APP_ELE: category[1],
@@ -24,36 +23,10 @@ const ACTIONS = {
   BEAUT_HEALTH_GROCERY: category[5],
 };
 
-//function reducer(state, action) {
-//  switch (action.type) {
-//    case "SET_OPTIONS":
-//      return action.payload;
-//    default:
-//      break;
-//  }
-//}
-
 function ProductAdd() {
   const [select, setSelect] = useState("select ");
   const [secSelet, setSecSelet] = useState("select");
-  //const [secondSelect, secondDispatch] = useReducer(reducer, []);
-  // console.log(dispatch(ACTIONS.MOBILE_COM));
-  //const hendelchangeEvent = (e) => {
-  //  //const selectValu = setSelect
-  //  //setSelect(selectValu);
-  //  //console.log(select);
-  //  let option ;
-  //  switch (select) {
-  //    case "mobile, computer":
-  //      option = Mobile_Computer;
-  //      break;
-  //    default:
-  //      break;
-  //  }
-  //  console.log(option);
-  //  return secondDispatch({ type: "SET_OPTIONS",payload:option });
-  //  //return option
-  //};
+
   let secondarr;
   switch (select) {
     case ACTIONS.MOBILE_COM:
@@ -75,59 +48,64 @@ function ProductAdd() {
       secondarr = Beauty_Health_Grocery;
       break;
     default:
-      secondarr = defolte
+      secondarr = defolte;
       break;
   }
 
   return (
     <div>
       <Navbar />
-      {/*<div className="container"></div>*/}
+
       <div className="addfrom">
         <div className="item1">
           <div>
-            <label htmlFor="pname">product name</label>
-            <input
-              type="text"
-              name="pname"
-              id="pname"
-              style={{ width: "95%", maxWidth: "90%" }}
-            />
-          </div>
-          <div style={{display:"flex"}}>
-            {/*<Autocomplete
-            disablePortal
-            options={category}
-            
-            />*/}
-          </div>
-          {/*<div style={{display:"flex"}}>
-              <div style={{width:"40%"}}>
-                <label>product types</label>
-                <Dropdown
-                  item={category}
-                  isSelect={select}
-                  setIsSelect={setSelect}
-                  //dispatch={dispatch}
-                  //onClick={hendelchangeEvent}
+            <Stack direction={"column"}>
+              <TextField label="product name" sx={{ width: "100%" }} />
+              <Stack direction={"row"}>
+                <TextField
+                  label="price"
+                  sx={{
+                    margin: "5px 5px 0 0",
+                    width: "50%",
+                  }}
                 />
-              
-              </div>
-              <div style={{width:"40%"}}>
-                <label >sub category</label>
-                <Dropdown
-                  item={secondarr}
-                  isSelect={secSelet}
-                  setIsSelect={setSecSelet}
-
-                  //dispatch={dispatch}
-                  //callfunction={()=>hendelchangeEvent}
+                <TextField
+                  label="quantity"
+                  sx={{
+                    margin: "5px 0 0 0",
+                    width: "50%",
+                  }}
                 />
-              </div>
-           
-          </div>*/}
+              </Stack>
+              <Stack
+                sx={{ justifyContent: "center", margin: "10px 0 0 0" }}
+                direction={"row"}
+              >
+                <Button
+                  variant="contained"
+                  sx={{
+                    width: "40%",
+                  }}
+                >
+                  Upload
+                </Button>
+              </Stack>
+            </Stack>
+          </div>
         </div>
-        <div className="item2"></div>
+        <div className="item2">
+          <Stack
+            direction={"column"}
+            sx={{ width: "50%", alignItems: "center" }}
+          >
+            <Stack direction={"row"} sx={{ justifyContent: "center" }}>
+              <img src={imgupload} alt="uloadimg" style={{width:"90%"}} />
+            </Stack>
+            <TextField 
+            type="file"
+            />
+          </Stack>
+        </div>
       </div>
 
       <Footer />

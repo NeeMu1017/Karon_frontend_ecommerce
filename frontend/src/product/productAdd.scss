@@ -18,8 +18,8 @@
     content: "";
     position: relative;
     .item2 {
-        text-align: center;
-        
+       display: flex;
+       justify-content: center;
         
     }
 
@@ -36,12 +36,8 @@
         }
 
         input {
-            //margin: 0 10px;
-            position: static;
-            content: "";
-            border: solid 1px #e0e0e0;
             border-radius: 5px;
-            padding: 5px 15px;
+            background-color: #fff;
         }       
 
 

@@ -1,0 +1,36 @@
+.card_media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card2 {
+    width: 90%;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px 0 5px 50px;
+    display: flex;
+
+    .media {
+        display: flex;
+        justify-content: center;
+        padding: 2px;
+        width: 20%;
+        min-width: 20%;
+        img {
+            max-width: 170px;
+            max-height: 210px;
+            
+        }
+       
+    }
+    
+    .product_info{
+        h2{
+            text-transform: capitalize;
+        }
+        
+    }
+
+}

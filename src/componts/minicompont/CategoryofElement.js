@@ -1,10 +1,10 @@
-export const Mobile_Computer = [
+const Mobile_Computer = [
   "mobilephone",
   "computer",
   "mobile associates",
   "computer associates",
 ];
-export  const category = [
+const categoryarr = [
   "mobile, computer",
   "tv, appliances, electronics",
   "men's fashion",
@@ -18,14 +18,14 @@ export  const category = [
   "espots, video game",
   "ecard",
 ];
-export const Tv_Appliances_Electronics = [
+const Tv_Appliances_Electronics = [
   "television",
   "headphone",
   "speaker",
   "home appliances",
   "kitchen",
 ];
-export const Men_Fashion = [
+const Men_Fashion = [
   "T-shirt",
   "shirt",
   "jeans",
@@ -36,7 +36,7 @@ export const Men_Fashion = [
   "bag",
   "shoes",
 ];
-export const Women_Fashion = [
+const Women_Fashion = [
   "T-shirt",
   "western wear ",
   "ethnic wear ",
@@ -47,7 +47,7 @@ export const Women_Fashion = [
   "bag",
   "shoes",
 ];
-export const Home_Kitchen_Pets = [
+const Home_Kitchen_Pets = [
   "kitchen",
   "showroom",
   "fine art",
@@ -58,14 +58,40 @@ export const Home_Kitchen_Pets = [
   "indoor lighting",
   "dog supplies",
 ];
-export const Beauty_Health_Grocery= [
-    "beatuty",
-    "luxury beatuty",
-    "make up",
-    "heath & personal care",
-    "pharmarcy",
-    "snack food",
-    "coffee tea ",
-    
-  ];
-export const defolte = []
+const Beauty_Health_Grocery = [
+  "beatuty",
+  "luxury beatuty",
+  "make up",
+  "heath & personal care",
+  "pharmarcy",
+  "snack food",
+  "coffee tea ",
+];
+
+export const category = [
+  {
+    name: categoryarr[0],
+    subcategory: Mobile_Computer,
+  },
+  {
+    name: categoryarr[1],
+    subcategory: Tv_Appliances_Electronics,
+  },
+
+  {
+    name: categoryarr[2],
+    subcategory: Men_Fashion,
+  },
+  {
+    name: categoryarr[3],
+    subcategory: Women_Fashion,
+  },
+  {
+    name: categoryarr[4],
+    subcategory: Home_Kitchen_Pets,
+  },
+  {
+    name: categoryarr[5],
+    subcategory: Beauty_Health_Grocery,
+  },
+];

@@ -35,7 +35,7 @@ export const Card = () => {
 
 export function Cardto({ name, image, despcription, price }) {
   return (
-    <div className="card2">
+    <div className="card2" onClick={()=>console.log("click me thank ")}>
       <div className="media">
         <div className="image">
           <img src={image} alt={name} />

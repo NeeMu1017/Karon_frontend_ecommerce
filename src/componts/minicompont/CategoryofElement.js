@@ -1,3 +1,11 @@
+import side1 from "../../image/slidewindows/slidewin1.jpg";
+import side2 from "../../image/slidewindows/slidewin2.jpg";
+import side3 from "../../image/slidewindows/slidewin3.jpg";
+import side4 from "../../image/slidewindows/slidewin4.jpg";
+import side5 from "../../image/slidewindows/slidewin5.jpg";
+import side6 from "../../image/slidewindows/slidwin6.jpg";
+import side7 from "../../image/slidewindows/slidewin7.jpg";
+
 const Mobile_Computer = [
   "mobilephone",
   "computer",
@@ -67,7 +75,13 @@ const Beauty_Health_Grocery = [
   "snack food",
   "coffee tea ",
 ];
-
+export const subcategory = [
+  ...Mobile_Computer,
+  ...Men_Fashion,
+  ...Beauty_Health_Grocery,
+  ...Home_Kitchen_Pets,
+  ...Tv_Appliances_Electronics,
+];
 export const category = [
   {
     name: categoryarr[0],
@@ -95,3 +109,33 @@ export const category = [
     subcategory: Beauty_Health_Grocery,
   },
 ];
+export const sidewin =[
+  {
+    id:1,
+    name:side1
+  },
+  {
+    id:2,
+    name:side2
+  },
+  {
+    id:3,
+    name:side3
+  },
+  {
+    id:4,
+    name:side4
+  },
+  {
+    id:5,
+    name:side5
+  },
+  {
+    id:6,
+    name:side6
+  },
+  {
+    id:7,
+    name:side7,
+  },
+]

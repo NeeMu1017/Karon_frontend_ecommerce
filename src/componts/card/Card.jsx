@@ -33,7 +33,7 @@ export const Card = () => {
   );
 };
 
-export function Cardto({ name, image, despcription, price }) {
+export function Cardto({ name, image, despcription, price,cate }) {
   return (
     <div className="card2" onClick={()=>console.log("click me thank ")}>
       <div className="media">
@@ -44,6 +44,7 @@ export function Cardto({ name, image, despcription, price }) {
       <div className="product_info">
         <h2>{name}</h2>
         <p>{despcription}</p>
+        <p>{cate}</p>
         <h2>
           <FontAwesomeIcon icon={faIndianRupeeSign} size="2xs" /> {price}
         </h2>

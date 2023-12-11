@@ -57,7 +57,7 @@ function Signin() {
       },
     }).then((res) => {
       navigate("/");
-      
+
       localStorage.setItem("login", "true");
     });
   };
@@ -99,7 +99,7 @@ function Signin() {
               <div className="feild">
                 <button onClick={handelsubmit}>Sign In</button>
               </div>
-              <a onClick={hendelSingup}> old user Login </a>
+              <p onClick={hendelSingup}> old user Login </p>
             </div>
           </div>
         ) : (
@@ -131,20 +131,17 @@ function Signin() {
               <div className="feild">
                 <button onClick={handelLogin}>Log In</button>
               </div>
-              <a
+              <p
                 onClick={() => {
                   setIsSing(false);
                 }}
                 className="toggelbutton"
               >
                 New User first Sign In{" "}
-              </a>
+              </p>
             </div>
           </div>
         )}
-      </div>
-      <div className="con2">
-        <img src="./image/sing.jpg" alt="loadi" />
       </div>
     </section>
   );

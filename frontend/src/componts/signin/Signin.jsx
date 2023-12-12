@@ -46,7 +46,7 @@ function Signin() {
     //console.log(user);
   };
   let hendelSingup = () => {
-    setIsSing(true);
+    setIsSing(!issingin);
   };
   let handelLogin = () => {
     fetch("http://localhost:4000/user/auth", {
@@ -64,11 +64,11 @@ function Signin() {
   return (
     <section className="login">
       <div className="con1">
-        {!issingin ? (
-          <div>
-            <h2>Sign </h2>
+        <div>
+          <h2>{!issingin ? "sign in" : "login"} </h2>
 
-            <div className="singcon">
+          <div className="singcon">
+            {!issingin ? (
               <div className="feild">
                 <input
                   type="text"
@@ -78,70 +78,37 @@ function Signin() {
                   onChange={handelChange}
                 />
               </div>
-              <div className="feild">
-                <input
-                  type="email"
-                  placeholder="email"
-                  name="email"
-                  value={user.email}
-                  onChange={handelChange}
-                />
-              </div>
-              <div className="feild">
-                <input
-                  type="text"
-                  placeholder="Password"
-                  name="password"
-                  value={user.password}
-                  onChange={handelChange}
-                />
-              </div>
-              <div className="feild">
-                <button onClick={handelsubmit}>Sign In</button>
-              </div>
-              <p onClick={hendelSingup}> old user Login </p>
+            ) : null}
+
+            <div className="feild">
+              <input
+                type="email"
+                placeholder="email"
+                name="email"
+                value={user.email}
+                onChange={handelChange}
+              />
             </div>
-          </div>
-        ) : (
-          <div>
-            <h2>Login </h2>
-            <div className="singcon">
-              {/*<div className="feild">
-                
-                <input type="text" placeholder="Name" id="" />
-              </div>*/}
-              <div className="feild">
-                <input
-                  type="email"
-                  placeholder="email"
-                  name="email"
-                  value={user.email}
-                  onChange={handelChange}
-                />
-              </div>
-              <div className="feild">
-                <input
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                  value={user.password}
-                  onChange={handelChange}
-                />
-              </div>
-              <div className="feild">
-                <button onClick={handelLogin}>Log In</button>
-              </div>
-              <p
-                onClick={() => {
-                  setIsSing(false);
-                }}
-                className="toggelbutton"
-              >
-                New User first Sign In{" "}
-              </p>
+            <div className="feild">
+              <input
+                type="text"
+                placeholder="Password"
+                name="password"
+                value={user.password}
+                onChange={handelChange}
+              />
             </div>
+            <div className="feild">
+              <button onClick={!issingin ? { handelsubmit } : { handelLogin }}>
+                {!issingin ? "sign in" : "login"}
+              </button>
+            </div>
+            <p onClick={hendelSingup}>
+              {" "}
+              {!issingin ? "old user Login " : "New User"}
+            </p>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

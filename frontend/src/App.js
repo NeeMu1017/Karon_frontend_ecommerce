@@ -16,14 +16,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route
+        <Route
           path="/"
           element={
             <SecureRoute>
               <Home />
             </SecureRoute>
           }
-        />                
+        />
         <Route
           path="/about"
           element={
@@ -41,8 +41,8 @@ function App() {
           }
         />
         <Route path="/signin" element={<Signin />} />
-        <Route path="/product" element={< Product/>} />
-        <Route path="/product/add" element={< ProductAdd/>} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/product/add" element={<ProductAdd />} />
 
         {/*<Route path="/login" element={<Login />} />*/}
       </Routes>

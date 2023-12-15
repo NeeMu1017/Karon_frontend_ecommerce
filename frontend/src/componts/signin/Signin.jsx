@@ -10,17 +10,12 @@ function Signin() {
   };
   const [user, setUser] = useState(data);
   const [issingin, setIsSing] = useState(false);
+  const [error, setError] = useState(null);
   const handelChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const navigate = useNavigate();
-  //
-  // useEffect(()=>{
-  //  let value = localStorage.getItem("login")
-  //  if(value === "true"){
-  //    setIsSing(true)
-  //  }
-  // })
+ 
   const fetchdata = () => {
     fetch("http://localhost:4000/user", {
       method: "POST",
@@ -34,8 +29,8 @@ function Signin() {
         //console.log(res);
         setUser(data);
         localStorage.setItem("login", "true");
-      } else {
-        throw new Error("responce is bad");
+      } else if(res.status === 400) {
+        setError( "pls fill all details")
       }
     });
   };
@@ -56,11 +51,17 @@ function Signin() {
         "Content-Type": "application/json",
       },
     }).then((res) => {
-      navigate("/");
-
-      localStorage.setItem("login", "true");
+      if (res.status === 200) {
+        navigate("/");
+        localStorage.setItem("login", "true");
+      } else if (res.status === 401) {
+        setError(" user not found pls sign in first ");
+      } else if (res.status === 400) {
+        setError("email and password require");
+      }
     });
   };
+
   return (
     <section className="login">
       <div className="con1">
@@ -99,16 +100,18 @@ function Signin() {
               />
             </div>
             <div className="feild">
-              <button onClick={!issingin ? { handelsubmit } : { handelLogin }}>
+              <button
+                onClick={!issingin ? () => handelsubmit() : () => handelLogin()}
+              >
                 {!issingin ? "sign in" : "login"}
               </button>
             </div>
             <p onClick={hendelSingup}>
-              {" "}
               {!issingin ? "old user Login " : "New User"}
             </p>
           </div>
         </div>
+        {error && <h5>{error}</h5>}
       </div>
     </section>
   );

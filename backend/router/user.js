@@ -7,7 +7,6 @@ router.get("/", async (req, resp) => {
   resp.send(await user.find({}));
 });
 
-
 // login api to call find data from database if data is not vaild give 400 statuse
 router.post("/auth", async (req, res) => {
   let { email, password } = req.body;
@@ -28,6 +27,7 @@ router.post("/auth", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+  
   const User = new user({
     name: req.body.name,
     email: req.body.email,
